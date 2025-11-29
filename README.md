@@ -88,11 +88,18 @@ etc...
 
 ---
 
-## 🔹 Contato
+## 🔹 Team
 
-- Desenvolvedor: Gonçalo Filipe dos Santos Oliveira  
-- GitHub: [github.com/goliv](https://github.com/goliv)
+- Desenvolvedores: Gonçalo Oliveira, Lucas Morim e Ruben Teixeira  
+- GitHub:
+
+[github.com/Gonçalo Oliveira](https://github.com/goncalo-f-oliveira)
+
+[github.com/Lucas Morim](https://github.com/lucas-morim)
+
+[github.com/Rúben Teixeira](https://github.com/rubenfteixeira)
 
 ---
 
 > ⚠️ Este projeto está em desenvolvimento e muitas funcionalidades ainda estão sendo implementadas.
+
