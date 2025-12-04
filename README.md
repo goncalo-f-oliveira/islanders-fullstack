@@ -1,105 +1,217 @@
 # 🎓 Islanders Fullstack Project
 
-[![Status](https://img.shields.io/badge/status-in%20progress-yellow)](https://github.com/goliv/islanders-fullstack)
-[![Python](https://img.shields.io/badge/python-3.13-blue)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100.0-green)](https://fastapi.tiangolo.com/)
-[![Angular](https://img.shields.io/badge/Angular-17-red)](https://angular.io/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)](https://www.postgresql.org/)
-[![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+A fullstack learning project built with **FastAPI**, **Angular**, authentication with roles/guards, clean folder architecture, and scalable backend/frontend separation.
 
 ---
 
-## 🔹 Sobre o Projeto
-
-O **Islanders Fullstack Project** é uma plataforma educacional em desenvolvimento, pensada para estudantes, professores e administradores de uma instituição fictícia/real. O objetivo principal é criar um ambiente interativo onde:
-
-- **Estudantes (Guest)** podem assistir a vídeos de cursos, realizar quizzes e receber **badges** por desempenho, que futuramente poderão gerar benefícios ou descontos na instituição.  
-- **Professores** terão acesso a dashboards restritos, podendo acompanhar o progresso dos estudantes e gerir conteúdos.  
-- **Administradores** terão controle total sobre usuários, cursos e dashboards da plataforma.
-
-O projeto integra **backend em FastAPI + SQLAlchemy** e **frontend em Angular**, com foco em autenticação segura via JWT, roles e permissões diferenciadas.
+## 🏷️ Badges
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge)
 
 ---
 
-## 🔹 Tecnologias
+## 📝 Short Description
 
-**Backend:**
-- Python 3.13
-- FastAPI
-- SQLAlchemy (ORM)
-- PostgreSQL (Neon - BD remota)
-- JWT para autenticação
+This project is a full-stack learning platform built with Angular (frontend) and FastAPI (backend), designed to simulate a real backoffice environment.
+It includes a complete authentication flow, persistent sessions, and role-based permissions (admin, professor, student, guest) that control what each user can view, create, edit, or delete.
 
-**Frontend:**
-- Angular 17
-- TypeScript
-- HTML/CSS
+Modules like Areas and Modalities are fully implemented with listing, filtering, pagination, detail view, editing, and secure action visibility based on the user’s role.
+The architecture follows clean modular organization, Angular signals for state management, and reusable guards to ensure protected and scalable navigation.
 
-**Outras ferramentas:**
-- Postman para testes API
+> ✍️ **Note:** The project is currently under development. Some sections (features/pages) are still a work in progress.
 
 ---
 
-## 🔹 Funcionalidades (Em andamento)
-
-- [x] Registro de usuários Guest (com valores default)
-- [x] Login com autenticação JWT
-- [x] Perfis de usuário com roles: Guest, Student, Professor, Admin
-- [x] AuthGuard no frontend para proteger rotas
-- [ ] Dashboard diferenciado por roles
-- [ ] Sistema de badges
-- [ ] Refresh token e logout automático
-- [ ] Integração completa frontend/backend
-- [ ] Testes unitários e end-to-end
+## 🚀 Features Backend
+- User authentication (JWT)
+- Role-based access control  
+- CRUD operations for core resources  
+- Request logging  
+- Modular architecture (db, repositories, routes)
 
 ---
 
-## 🔹 Estrutura do Projeto
+## 🎨 Features Frontend
+- Login system  
+- Role-based guards  
+- Angular interceptors  
+- Clean layout separation (front-shell, back-shell, login-shell)
+
+---
+
+## 🔐 Authentication & Authorization
+- **JWT Authentication**
+- **Roles:** Guest, Student, Teacher and Admin  
+- **Guards** protecting pages based on the user's role
+
+---
+
+## 🏗️ System Overview
+
+### **User Roles & Permissions**
+
+| Role       | Permissions |
+|------------|-------------|
+| Admin      | Full access, manage users & protected routes |
+| Manager    | Limited management actions |
+| User       | Basic read-only actions depending on module, can't acess to the dashboard (backoffice) |
+
+---
+
+## 📦 Project Structure
+
+### **Backend (FastAPI)**
 
 ```text
-islanders-fullstack/
-│
 backend/
-├─ app/
-│ ├─ api/v1/routers/ # Endpoints da API
-│ ├─ services/ # Lógica de negócio
-│ ├─ models/ # Modelos ORM
-│ ├─ schemas/ # Pydantic schemas
-│ └─ core/ # Config, segurança, deps
+│── app/
+│   ├── api/              # Routes/endpoints
+│   ├── core/             # Config, security, settings
+│   ├── db/               # Database session & connection
+│   ├── models/           # ORM models
+│   ├── repositories/
+│   │     └── crud/       # CRUD logic
+│   ├── schemas/          # Pydantic schemas
+│   └── main.py           # App entrypoint
+...
+```
+<br>
+
+## **Frontend (Angular)**
+
+```text
 frontend/
-├─ src/app/
-| ├─ componnents/ #Componentes necessários
-│ ├─ pages/ # Páginas, como frontoffice e backoffice
-│ ├─ services/ # Serviços Angular
-│ └─ guards/ # AuthGuard
-etc...
+│── src/
+│   ├── app/
+│   │    ├── core/                 
+│   │    │     ├── interceptors/   # Token handling, errors, auth
+│   │    │     ├── layouts/
+│   │    │     │      ├── back-shell/
+│   │    │     │      ├── front-shell/
+│   │    │     │      └── login-shell/
+│   │    └── ... (modules/components)
+│   ├── assets/                     # Static assets
+...
 ```
 
+---
+
+## 🧰 Tech Stack
+
+### **Backend**
+- FastAPI  
+- Python  
+- PostgreSQL  
+- SQLAlchemy  
+- Pydantic  
+
+### **Frontend**
+- Angular  
+- TypeScript  
+- RxJS  
 
 ---
 
-## 🔹 Próximos Passos
+## ⚙️ Installation & Usage
 
-- Implementação completa do **dashboard** por roles.  
-- Sistema de **badges e conquistas** para estudantes.  
-- Implementar **refresh token** e **logout automático**.  
-- Melhorar testes e documentação da API.  
-- Deploy para ambiente de teste.
+### **1. Clone the Repository**
 
----
-
-## 🔹 Team
-
-- Desenvolvedores: Gonçalo Oliveira, Lucas Morim e Ruben Teixeira  
-- GitHub:
-
-[github.com/Gonçalo Oliveira](https://github.com/goncalo-f-oliveira)
-
-[github.com/Lucas Morim](https://github.com/lucas-morim)
-
-[github.com/Rúben Teixeira](https://github.com/rubenfteixeira)
+```bash
+git clone https://github.com/goncalo-f-oliveira/islanders-fullstack.git
+cd islanders-fullstack
+```
 
 ---
 
-> ⚠️ Este projeto está em desenvolvimento e muitas funcionalidades ainda estão sendo implementadas.
+### **2. Running the Backend**
 
+```bash
+cd backend
+uvicorn app.main:app --reload
+```
+
+Backend will run on:
+
+```
+http://localhost:8000
+```
+
+---
+
+### **3. Running the Frontend**
+
+```bash
+cd frontend
+ng serve
+```
+
+Frontend will run on:
+
+```
+http://localhost:4200
+```
+
+---
+
+## 🏆 CRUD Functionality (Current Status)
+
+| Module   | Create | Read | Update | Delete |
+|----------|--------|-------|--------|--------|
+| Users    | ✔️ | ✔️ | ✔️ | ✔️ |
+| Role     | ✔️ | ✔️ | ✔️ | ✔️ |
+| Area     | ✔️ | ✔️ | ✔️ | ✔️ |
+| Course   | ✔️ | ✔️ | ✔️ | ✔️ |
+| Modality | ✔️ | ✔️ | ✔️ | ✔️ |
+| Auth     | ✔️ | ✔️ | — | — |
+
+---
+
+## ⭐ Project Highlights
+
+- Clean and scalable folder architecture  
+- Full role-based access system  
+- Proper separation of frontend/backoffice layouts  
+- Consistent naming and structure  
+- Modular backend with CRUD repository pattern  
+
+---
+
+## 👤 My Contributions
+
+- Backend architecture & routes  
+- Authentication system (JWT + roles)
+- Restrict user functions based on roles (AuthGuard)
+- Integrate API calls into the frontoffice
+- Angular app setup & guards  
+- Documentation
+
+---
+
+## 🗺️ Roadmap
+
+### **Phase 1 — Core System (Done)**
+- Authentication system  
+- Basic layouts  
+- Guards  
+- Logging (done)
+
+### **Phase 2 — Application Features (In Progress)**
+- User management pages  
+- Protected routes  
+- CRUD pages for core modules  
+
+### **Phase 3 — Future Add-ons**
+- Dashboard widgets  
+- Improved UI/UX  
+- Notification system  
+- Extra modules depending on project evolution  
+
+---
+
+## 🤝 Contributing
+
+- **Lucas Morim:** https://github.com/lucas-morim  
+- **Ruben Teixeira:** https://github.com/rubenfteixeira  
