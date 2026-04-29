@@ -21,8 +21,6 @@ It includes a complete authentication flow, persistent sessions, and role-based 
 Modules like Areas and Modalities are fully implemented with listing, filtering, pagination, detail view, editing, and secure action visibility based on the user’s role.
 The architecture follows clean modular organization, Angular signals for state management, and reusable guards to ensure protected and scalable navigation.
 
-> ✍️ **Note:** The project is currently under development. Some sections (features/pages) are still a work in progress.
-
 ---
 
 ## 🚀 Features Backend
