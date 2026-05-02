@@ -23,6 +23,12 @@ The architecture follows clean modular organization, Angular signals for state m
 
 ---
 
+## 🎬 Demo
+
+https://github.com/goncalo-f-oliveira/vas/assets/demo.mp4
+
+---
+
 ## 🚀 Features Backend
 - User authentication (JWT)
 - Role-based access control  
@@ -174,31 +180,3 @@ http://localhost:4200
 - Proper separation of frontend/backoffice layouts  
 - Consistent naming and structure  
 - Modular backend with CRUD repository pattern  
-
----
-
-## 🗺️ Roadmap
-
-### **Phase 1 — Core System (Done)**
-- Authentication system  
-- Basic layouts  
-- Guards  
-- Logging (done)
-
-### **Phase 2 — Application Features (In Progress)**
-- User management pages  
-- Protected routes  
-- CRUD pages for core modules  
-
-### **Phase 3 — Future Add-ons**
-- Dashboard widgets  
-- Improved UI/UX  
-- Notification system  
-- Extra modules depending on project evolution  
-
----
-
-## 🤝 Contributing
-
-- **Gonçalo Oliveira:** https://github.com/goncalo-f-oliveira  
-- **Ruben Teixeira:** https://github.com/rubenfteixeira  
