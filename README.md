@@ -25,7 +25,13 @@ The architecture follows clean modular organization, Angular signals for state m
 
 ## 🎬 Demo
 
-https://github.com/goncalo-f-oliveira/vas/assets/demo.mp4
+<p align="left">
+  <a href="https://youtu.be/NT8X4QytvTI" target="_blank">
+    <img src="./assets/thumbnail_islander.png" alt="Clique para assistir a demonstração" width="900">
+  </a>
+  <br>
+  <ins>Clique na imagem acima para assistir ao vídeo completo no <b>YouTube</b></ins>
+</p>
 
 ---
 
