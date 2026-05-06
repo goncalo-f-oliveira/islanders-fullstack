@@ -98,8 +98,8 @@ flowchart TD
 | Receive badges | ❌ | ✅ | ✅ | ✅ |
 | Access backoffice | ❌ | ❌ | ✅ | ✅ |
 | Manage content (areas, courses, quizzes) | ❌ | ❌ | ✅ | ✅ |
+| Export CSV | ❌ | ❌ | ✅ | ✅ |
 | Manage users and roles | ❌ | ❌ | ❌ | ✅ |
-| Export CSV | ❌ | ❌ | ❌ | ✅ |
 
 > **Note:** Role enforcement is handled via guards on the frontend. On the backend, authentication is validated through `get_current_user`; `require_roles` is applied on critical routes.
 
